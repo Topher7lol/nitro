@@ -1,11 +1,11 @@
 import random
 import string
-import requests
+try:
+    import requests
+except ImportError:
+    print("This code requires requests. Run 'pip install requests' to install requests.")
 
-if not requests:
-    print("Pip Install Requests To Use")
-
-codelength = random.randint(7, 9)
+codelength = random.randint(7, 13)
 
 def generate_random_line():
     characters = string.ascii_letters + string.digits
